@@ -16,24 +16,25 @@
     android:background="@color/colorPrimary">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="right"
-        android:background="@drawable/button_round"
+        android:background="#273238"
         android:elevation="20sp"
+        android:padding="0dp"
         android:onClick="goToSettings"
-        android:text="Profile"
+        android:src="@drawable/ic_person_black_24dp"
         android:textColor="#273238"
         android:textAllCaps="false">
 
-    </Button>
+    </ImageButton>
 </LinearLayout>
 
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="580dp"
         android:background="@color/colorPrimary"
         app:rotation_degrees="15.5"
         tools:context=".MyActivity" />
@@ -43,8 +44,7 @@
         android:orientation="horizontal"
         android:background="@color/colorPrimary"
         android:paddingEnd="50dp"
-        android:paddingLeft="50dp"
-        android:gravity="bottom">
+        android:paddingLeft="50dp">
 
         <Button
             android:layout_width="wrap_content"

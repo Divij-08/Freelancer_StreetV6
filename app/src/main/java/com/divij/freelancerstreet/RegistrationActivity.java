@@ -1,8 +1,5 @@
 package com.divij.freelancerstreet;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +10,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -98,6 +100,18 @@ public class RegistrationActivity extends AppCompatActivity {
 
                          String userId= Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
                          DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(RegistrationActivity.this, "Check your mail", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(RegistrationActivity.this, "Invalid mail id", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                          Map<String, Object> userInfo = new HashMap<String, Object>();
                          userInfo.put("name",name);
                          userInfo.put("LinkedIn",linkedin);

@@ -1,16 +1,15 @@
 package com.divij.freelancerstreet.Chats;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toolbar;
 
 import com.divij.freelancerstreet.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,7 +31,7 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView.Adapter<ChatViewHolder> mChatAdapter;
     private RecyclerView.LayoutManager mChatlayoutManager;
     private EditText mSendEditText;
-    private Button mSendButton;
+    private ImageButton mSendButton;
     private String currentUserId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
     private String matchId,chatId;
     DatabaseReference mDatabaseUser,mDatabaseChats;

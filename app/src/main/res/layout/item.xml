@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@android:color/white">
+            android:background="@drawable/swap_card_style">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image"

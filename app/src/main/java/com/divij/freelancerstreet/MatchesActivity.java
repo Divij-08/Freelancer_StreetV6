@@ -1,12 +1,12 @@
 package com.divij.freelancerstreet;
 
+import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.renderscript.Sampler;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +22,7 @@ public class MatchesActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mMatchesAdapter;
     private RecyclerView.LayoutManager mMatcheslayoutManager;
+    private TextView mTextView;
     private String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
 
@@ -30,6 +31,7 @@ public class MatchesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matches);
         mRecyclerView = findViewById(R.id.recyclerView);
+        mTextView = findViewById(R.id.matchText);
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setHasFixedSize(true);
         mMatcheslayoutManager = new LinearLayoutManager(MatchesActivity.this);
@@ -49,6 +51,7 @@ public class MatchesActivity extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot match : dataSnapshot.getChildren()){
                        FetchMatchInformation(match.getKey());
+                        mTextView.setText("Congratulations !! You got some matches");
                     }
                 }
             }

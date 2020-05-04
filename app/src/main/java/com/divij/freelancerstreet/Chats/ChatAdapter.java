@@ -7,11 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.divij.freelancerstreet.R;
 
 import java.util.List;
@@ -42,7 +40,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder> {
             holder.mMessage.setGravity(Gravity.END);
             holder.container.setGravity(Gravity.END);
             holder.mMessage.setTextColor(Color.parseColor("#404040"));
-            holder.mMessage.setBackgroundColor(Color.parseColor("#83bf84"));
+            // holder.mMessage.setBackgroundColor(Color.parseColor("#83bf84"));
            // holder.container.setBackgroundColor(Color.parseColor("#F4F4F4"));
         }else{
             holder.mMessage.setGravity(Gravity.START);

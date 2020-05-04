@@ -2,14 +2,16 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="20sp">
+    android:padding="20sp"
+    android:background="@drawable/match_item_style">
     <ImageView
         android:layout_width="50sp"
         android:layout_height="50sp"
         android:src="@drawable/ic_launcher_background"
-        android:id="@+id/MatchImage"/>
+        android:id="@+id/MatchImage"
+        android:background="@drawable/match_item_image_style" />
     <LinearLayout
         android:paddingStart="20sp"
         android:layout_width="match_parent"
@@ -22,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Match's Name"
         android:textSize="20sp"
+        android:textColor="#000"
         android:id="@+id/MatchName">
 
     </TextView>
@@ -29,6 +32,7 @@
         android:id="@+id/Matchid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:text="Match's ID">
 
     </TextView>
