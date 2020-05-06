@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,8 @@
     android:background="#273238"
     android:orientation="vertical">
 
-  <LinearLayout
+
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
@@ -67,10 +67,17 @@
 
         </TextView>
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:hint="email"
+        android:hint="Email    (Do verify here -->)"
         android:id="@+id/email"/>
+
+        <ImageButton
+            android:id="@+id/vEBtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_verified"
+            android:background="@drawable/profile_icon_style" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,6 +96,7 @@
         android:hint="Linkedin Profile Link"
         android:id="@+id/Linkedin"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -177,6 +185,7 @@
             android:text="SignIn">
 
         </TextView>
+
     </LinearLayout>
 
 
