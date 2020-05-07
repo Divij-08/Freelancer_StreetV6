@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30sp"
+    android:padding="20sp"
     android:gravity="center"
     tools:context=".RegistrationActivity"
     android:background="#273238"
@@ -25,7 +25,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="name"
+        android:hint="Name"
         android:id="@+id/name"/>
   </LinearLayout>
     <LinearLayout
@@ -67,17 +67,12 @@
 
         </TextView>
     <EditText
-        android:layout_width="230dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email    (Do verify here -->)"
+        android:hint="Email"
         android:id="@+id/email"/>
 
-        <ImageButton
-            android:id="@+id/vEBtn"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_verified"
-            android:background="@drawable/profile_icon_style" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -147,7 +142,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
+        android:hint="Password"
         android:layout_marginLeft="10dp"
         android:id="@+id/password"/>
     </LinearLayout>
